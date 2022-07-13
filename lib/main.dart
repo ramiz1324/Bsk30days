@@ -1,3 +1,4 @@
+import 'package:bsk_flutter_1/homepage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,18 +14,7 @@ class Myapp extends StatelessWidget {
       debugShowCheckedModeBanner:false,
       title: "Bangla Sahayata Kendra",
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: Scaffold(
-          appBar: AppBar(
-
-            title: Text(
-              "Bangla Sahayata Kendra",
-              style: TextStyle(color: Colors.black, fontFamily: ""),
-            ),
-            centerTitle: true,
-          ),
-          drawer: Drawer(),
-          body: Text(""),
-          )
+      home: Homepage()
           
     );
   }
