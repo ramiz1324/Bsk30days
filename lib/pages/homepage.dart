@@ -8,6 +8,8 @@ class Homepage extends StatelessWidget {
     int days = 30;
     double temp = 30.2;
     String name = "ramiz";
+    bool male = true;
+    var strng = "ramiz mini";
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -17,7 +19,7 @@ class Homepage extends StatelessWidget {
         centerTitle: true,
       ),
       drawer: Drawer(),
-      body: Center(child: Text("$days, $temp ,$name ")),
+      body: Center(child: Text("$days, $temp ,$name $male $strng")),
     );
   }
 }

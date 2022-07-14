@@ -1,5 +1,8 @@
-import 'package:bsk_flutter_1/homepage.dart';
+
+import 'package:bsk_flutter_1/pages/homepage.dart';
 import 'package:flutter/material.dart';
+
+import 'loginPage.dart';
 
 void main() {
   runApp(Myapp());
@@ -14,7 +17,19 @@ class Myapp extends StatelessWidget {
       debugShowCheckedModeBanner:false,
       title: "Bangla Sahayata Kendra",
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: Homepage()
+      //home: Homepage(),
+      themeMode: ThemeMode.light,
+      darkTheme: ThemeData(
+        brightness: Brightness.dark
+      ),
+       initialRoute: "/homepage",
+      routes: {
+        "/": (context) => LoginPage(),
+        "/homepage": (context) =>Homepage()
+
+
+      },
+      
           
     );
   }
