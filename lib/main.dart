@@ -1,8 +1,9 @@
-import 'package:bsk_flutter_1/pages/homepage.dart';
+
+import 'package:bsk_flutter_1/loginpage.dart';
+import 'package:bsk_flutter_1/register.dart';
+import 'package:bsk_flutter_1/singup.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import 'loginPage.dart';
 
 void main() {
   runApp(Myapp());
@@ -21,13 +22,15 @@ class Myapp extends StatelessWidget {
           primaryTextTheme: GoogleFonts.latoTextTheme(),
           primarySwatch: Colors.blue),
 
-      //home: Homepage(),
+      home: LoginPage(),
       themeMode: ThemeMode.light,
       darkTheme: ThemeData(brightness: Brightness.dark),
-      initialRoute: "/",
-      routes: {
-        "/": (context) => LoginPage(),
-        "/homepage": (context) => Homepage()
+      initialRoute: "/login",
+     routes: {
+        "/login": (context) => LoginPage(),
+        "/register":((context) => HomePage2()),
+        "/singup":((context) => Home()),
+
       },
     );
   }
