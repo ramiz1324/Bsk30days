@@ -1,6 +1,6 @@
-
 import 'package:bsk_flutter_1/pages/homepage.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'loginPage.dart';
 
@@ -14,23 +14,21 @@ class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner:false,
+      debugShowCheckedModeBanner: false,
       title: "Bangla Sahayata Kendra",
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+          fontFamily: GoogleFonts.lato().fontFamily,
+          primaryTextTheme: GoogleFonts.latoTextTheme(),
+          primarySwatch: Colors.blue),
+
       //home: Homepage(),
       themeMode: ThemeMode.light,
-      darkTheme: ThemeData(
-        brightness: Brightness.dark
-      ),
-       initialRoute: "/homepage",
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      initialRoute: "/",
       routes: {
         "/": (context) => LoginPage(),
-        "/homepage": (context) =>Homepage()
-
-
+        "/homepage": (context) => Homepage()
       },
-      
-          
     );
   }
 }
