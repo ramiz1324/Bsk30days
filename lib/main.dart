@@ -1,4 +1,5 @@
 
+import 'package:bsk_flutter_1/homepage.dart';
 import 'package:bsk_flutter_1/loginpage.dart';
 import 'package:bsk_flutter_1/register.dart';
 import 'package:bsk_flutter_1/singup.dart';
@@ -14,7 +15,7 @@ class Myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp( 
       debugShowCheckedModeBanner: false,
       title: "Bangla Sahayata Kendra",
       theme: ThemeData(
@@ -22,14 +23,15 @@ class Myapp extends StatelessWidget {
           primaryTextTheme: GoogleFonts.latoTextTheme(),
           primarySwatch: Colors.blue),
 
-      home: LoginPage(),
+      //00home: LoginPage(),
       themeMode: ThemeMode.light,
       darkTheme: ThemeData(brightness: Brightness.dark),
-      initialRoute: "/login",
+      initialRoute: "/homepage",
      routes: {
         "/login": (context) => LoginPage(),
         "/register":((context) => HomePage2()),
         "/singup":((context) => Home()),
+        "/homepage":((context) => HomePage()),
 
       },
     );
