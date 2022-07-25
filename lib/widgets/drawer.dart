@@ -1,4 +1,4 @@
-import 'dart:ui';
+//import 'dart:ui';
 
 import 'package:bsk_flutter_1/singup.dart';
 import 'package:flutter/cupertino.dart';
@@ -41,6 +41,9 @@ class Mydrawer extends StatelessWidget {
               ),
             ),
             ListTile(
+              onTap: () {
+                Navigator.pushNamed(context, "/login");
+              },
               leading: Icon(CupertinoIcons.profile_circled),
               title: Text(
                 "Profile",
@@ -58,5 +61,5 @@ class Mydrawer extends StatelessWidget {
         ),
       ),
     );
-  }                                                                    
+  }
 }

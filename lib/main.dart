@@ -16,16 +16,22 @@ class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp( 
+      //themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
-      title: "Bangla Sahayata Kendra",
+      title: "BSK",
       theme: ThemeData(
           fontFamily: GoogleFonts.lato().fontFamily,
           primaryTextTheme: GoogleFonts.latoTextTheme(),
+          appBarTheme: AppBarTheme(color: Colors.white,elevation: 0.0,
+          iconTheme: IconThemeData(color: Colors.black),
+          textTheme: Theme.of(context).textTheme
+          ),
+          
           primarySwatch: Colors.blue),
 
       //00home: LoginPage(),
-      themeMode: ThemeMode.light,
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      //themeMode: ThemeMode.light,
+     // darkTheme: ThemeData(brightness: Brightness.dark),
       initialRoute: "/homepage",
      routes: {
         "/login": (context) => LoginPage(),
