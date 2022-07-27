@@ -5,7 +5,7 @@ class CatalogModel{
   desc: "Apple Iphone 12 pro",
   price: 999,
   color: "#33505a",
-  image: "https://beyondapple.in/wp-content/uploads/2021/05/iphone-12-pro-family-hero-1.jpg"
+  image: "https://m.media-amazon.com/images/I/71umuN8XVeL._SX522_.jpg"
 
 )];
 }

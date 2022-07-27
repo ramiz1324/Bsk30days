@@ -4,6 +4,8 @@ import 'package:bsk_flutter_1/model/catalog.dart';
 import 'package:bsk_flutter_1/widgets/drawer.dart';
 import 'package:bsk_flutter_1/widgets/item_wedget.dart';
 import 'package:flutter/material.dart';
+import 'dart:convert';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:bsk_flutter_1/model/catalog.dart';
 //import 'package:form_field_validator/form_field_validator.dart';
@@ -16,6 +18,19 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  loadData() async {
+    var catalogJson = await rootBundle.loadString("assets/files/catalog.json");
+    //print(catalogJson);
+    var decoddedData = jsonDecode(catalogJson);
+    print(decoddedData);
+  }
+
   final mostak = GlobalKey<FormState>();
   suraj(BuildContext context) {
     //Navigator.pushNamed(context, "");
@@ -44,7 +59,9 @@ class _HomePageState extends State<HomePage> {
         child: ListView.builder(
           itemCount: dummylist.length,
           itemBuilder: (context, index) {
-            return ItemWidget(item: dummylist[index],);
+            return ItemWidget(
+              item: dummylist[index],
+            );
           },
         ),
       ),

@@ -1,4 +1,5 @@
 
+import 'package:bsk_flutter_1/appbar.dart';
 import 'package:bsk_flutter_1/homepage.dart';
 import 'package:bsk_flutter_1/loginpage.dart';
 import 'package:bsk_flutter_1/register.dart';
@@ -38,6 +39,7 @@ class Myapp extends StatelessWidget {
         "/register":((context) => HomePage2()),
         "/singup":((context) => Home()),
         "/homepage":((context) => HomePage()),
+        "/appber" :(context) => Appber(),
 
       },
     );

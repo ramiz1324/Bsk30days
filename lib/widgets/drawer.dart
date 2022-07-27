@@ -34,6 +34,9 @@ class Mydrawer extends StatelessWidget {
               padding: EdgeInsets.zero,
             ),
             ListTile(
+              onTap: (() {
+                Navigator.pushNamed(context, '/appber');
+              }),
               leading: Icon(CupertinoIcons.home),
               title: Text(
                 "Home",

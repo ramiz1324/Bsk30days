@@ -1,0 +1,68 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "iPhone 12 Pro",
+            "desc": "Apple Brand",
+            "price": 999,
+            "color": "#33505a",
+            "image": "https://m.media-amazon.com/images/I/71umuN8XVeL._SX522_.jpg"
+        },
+        {
+            "id": 2,
+            "name": "iPhone 13",
+            "desc": "Apple Brand",
+            "price": 1200,
+            "color": "#00ac51",
+            "image": "https://m.media-amazon.com/images/I/71xb2xkN5qL._SL1500_.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Samsung S12",
+            "desc": "Samsung S series",
+            "price": 1005,
+            "color": "#7C95eb",
+            "image": "https://images.samsung.com/is/image/samsung/p6pim/latin_en/2202/gallery/latin-en-galaxy-s22-s901-412946-sm-s901eidjgto-530964448?$650_519_PNG$"
+        },
+        {
+            "id": 3,
+            "name": "Samsung S12",
+            "desc": "Samsung S series",
+            "price": 1005,
+            "color": "#7C95eb",
+            "image": "https://images.samsung.com/is/image/samsung/p6pim/latin_en/2202/gallery/latin-en-galaxy-s22-s901-412946-sm-s901eidjgto-530964448?$650_519_PNG$"
+        },
+        {
+            "id": 4,
+            "name": "One Plus 10 Pro ",
+            "desc": "Vast selection of components",
+            "price": 1005,
+            "color": "#7C95eb",
+            "image": "https://cdn.dxomark.com/wp-content/uploads/medias/post-111229/OnePlus-10-Pro_featured-image-packshot-review.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Vivo Y75 5g",
+            "desc": "Vivo Brand",
+            "price": 712,
+            "color": "#33505a",
+            "image": "https://i.gadgets360cdn.com/products/large/vivo-y75-5g-625x800-1643270875.jpg?downsize=*:360"
+        },
+        {
+            "id": 6,
+            "name": "Oppo Reno 6",
+            "desc": "Oppo Mobile",
+            "price": 669,
+            "color": "#33505a",
+            "image": "https://htsg-store-gl.heytapimg.com/ebp/202108/11/1-M00-00-3C-CgGRkWETmsuAJ9buAACooRGkyIg493_1080_960.jpg"
+        },
+        {
+            "id": 7,
+            "name": "iqoo 7 legend",
+            "desc": "iqoo Mobile",
+            "price": 912,
+            "color": "#33505a",
+            "image": "https://static.toiimg.com/thumb/resizemode-4,msid-82256013,imgsize-60451,width-720/82256013.jpg"
+        }
+    ]
+}
