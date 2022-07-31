@@ -4,7 +4,7 @@
             "id": 1,
             "name": "iPhone 12 Pro",
             "desc": "Apple Brand",
-            "price": 999,
+            "price": 998,
             "color": "#33505a",
             "image": "https://m.media-amazon.com/images/I/71umuN8XVeL._SX522_.jpg"
         },
@@ -25,7 +25,7 @@
             "image": "https://images.samsung.com/is/image/samsung/p6pim/latin_en/2202/gallery/latin-en-galaxy-s22-s901-412946-sm-s901eidjgto-530964448?$650_519_PNG$"
         },
         {
-            "id": 3,
+            "id": 4,
             "name": "Samsung S12",
             "desc": "Samsung S series",
             "price": 1005,
@@ -33,7 +33,7 @@
             "image": "https://images.samsung.com/is/image/samsung/p6pim/latin_en/2202/gallery/latin-en-galaxy-s22-s901-412946-sm-s901eidjgto-530964448?$650_519_PNG$"
         },
         {
-            "id": 4,
+            "id": 5,
             "name": "One Plus 10 Pro ",
             "desc": "Vast selection of components",
             "price": 1005,
@@ -41,7 +41,7 @@
             "image": "https://cdn.dxomark.com/wp-content/uploads/medias/post-111229/OnePlus-10-Pro_featured-image-packshot-review.jpg"
         },
         {
-            "id": 5,
+            "id": 6,
             "name": "Vivo Y75 5g",
             "desc": "Vivo Brand",
             "price": 712,
@@ -49,7 +49,7 @@
             "image": "https://i.gadgets360cdn.com/products/large/vivo-y75-5g-625x800-1643270875.jpg?downsize=*:360"
         },
         {
-            "id": 6,
+            "id": 7,
             "name": "Oppo Reno 6",
             "desc": "Oppo Mobile",
             "price": 669,
@@ -57,7 +57,7 @@
             "image": "https://htsg-store-gl.heytapimg.com/ebp/202108/11/1-M00-00-3C-CgGRkWETmsuAJ9buAACooRGkyIg493_1080_960.jpg"
         },
         {
-            "id": 7,
+            "id": 8,
             "name": "iqoo 7 legend",
             "desc": "iqoo Mobile",
             "price": 912,

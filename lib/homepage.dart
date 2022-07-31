@@ -18,6 +18,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List<Item> item = [];
   @override
   void initState() {
     super.initState();
@@ -25,10 +26,15 @@ class _HomePageState extends State<HomePage> {
   }
 
   loadData() async {
+    await Future.delayed(Duration(seconds: 1));
     var catalogJson = await rootBundle.loadString("assets/files/catalog.json");
     //print(catalogJson);
-    var decoddedData = jsonDecode(catalogJson);
-    print(decoddedData);
+    final decoddedData = jsonDecode(catalogJson);
+
+    final productData = decoddedData["products"];
+    item =
+        List.from(productData).map<Item>((item) => Item.frommap(item)).toList();
+    setState(() {});
   }
 
   final mostak = GlobalKey<FormState>();
@@ -39,8 +45,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final dummylist = List.generate(20, ((index) => CatalogModel.items[0]));
-    int value = 5;
+    //print(CatalogModel.items.length);
     return Scaffold(
       drawer: Mydrawer(),
       //backgroundColor: Colors.black,
@@ -54,18 +59,67 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(color: Colors.black),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: ListView.builder(
-          itemCount: dummylist.length,
-          itemBuilder: (context, index) {
-            return ItemWidget(
-              item: dummylist[index],
-            );
-          },
-        ),
-      ),
+      body: // )
+          Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    mainAxisSpacing: 16, crossAxisSpacing: 16),
+
+                itemBuilder: (context, index) {
+                  final more = item[index];
+                 return Card(
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  clipBehavior: Clip.antiAlias,
+                   child: GridTile(
+                      child: Image.network(more.image), 
+                      header: Container(child: Text(more.name),
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.deepPurple,
+                      ),
+                      ),
+                      footer: Text(more.price.toString()),
+                    ),
+                 );
+                },
+                itemCount: item.length,
+                
+              )
+              // ListView.builder(
+              //   itemCount: item.length,
+              //   itemBuilder: (context, index) {
+              //     return ItemWidget(
+              //       item: item[index],
+              //     );
+              //   },
+              // ),
+              ),
     );
+    //  FutureBuilder(
+    //   future: DefaultAssetBundle.of(context)
+    //       .loadString("assets/files/catalog.json"),
+    //   builder: (context, snapShot) {
+    //     var mydata = json.decode(snapShot.data.toString());
+    //     if(mydata== null){
+    //         return Center(
+    //         child: Text(
+    //      "Loding",
+    //       style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),
+    //     ));
+    //     }
+    //     else{
+    //       return Center(
+    //         child: Text(
+    //       mydata["products"][7]["image"],
+    //       style: TextStyle(fontSize: 42, fontWeight: FontWeight.bold),
+    //     ));
+
+    //     }
+
+    //   },
+
     // Center(
     //   child: Form(
     //     key: mostak,

@@ -61,8 +61,7 @@ class _AppberState extends State<Appber> {
                 icon: Icon(Icons.search)),
           ],
         ),
-        body: TabBarView(children: [
-          
+        body: TabBarView(children: [ 
           buildPage('HomePage'),
           buildPage('feed'),
           buildPage('profile'),
