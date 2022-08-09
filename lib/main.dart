@@ -1,4 +1,3 @@
-
 import 'package:bsk_flutter_1/appbar.dart';
 import 'package:bsk_flutter_1/homepage.dart';
 import 'package:bsk_flutter_1/loginpage.dart';
@@ -16,33 +15,39 @@ class Myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp( 
+    return MaterialApp(
       //themeMode: ThemeMode.light,
       debugShowCheckedModeBanner: false,
       title: "BSK",
       theme: ThemeData(
-          fontFamily: GoogleFonts.lato().fontFamily,
+          fontFamily: GoogleFonts.poppins().fontFamily,
           primaryTextTheme: GoogleFonts.latoTextTheme(),
-          appBarTheme: AppBarTheme(color: Colors.white,elevation: 0.0,
-          iconTheme: IconThemeData(color: Colors.black),
-          textTheme: Theme.of(context).textTheme,
-          toolbarTextStyle: TextStyle(color: Colors.black),
+          appBarTheme: AppBarTheme(
+            color: Colors.white,
+            elevation: 0.0,
+            iconTheme: IconThemeData(color: Colors.black),
+            textTheme: Theme.of(context).textTheme,
+            toolbarTextStyle: TextStyle(color: Colors.black),
           ),
-          
           primarySwatch: Colors.blue),
 
       //00home: LoginPage(),
       //themeMode: ThemeMode.light,
-     // darkTheme: ThemeData(brightness: Brightness.dark),
+      // darkTheme: ThemeData(brightness: Brightness.dark),
+      //initialRoute: "/ui",
       initialRoute: "/homepage",
-     routes: {
-        "/login": (context) => LoginPage(),
-        "/register":((context) => HomePage2()),
-        "/singup":((context) => Home()),
-        "/homepage":((context) => HomePage()),
-        "/appber" :(context) => Appber(),
 
+      routes: {
+        "/login": (context) => LoginPage(),
+        "/register": ((context) => HomePage2()),
+        "/singup": ((context) => Home()),
+        "/homepage": ((context) => HomePage()),
+        "/appber": (context) => Appber(),
+        //"/ui": ((context) => UicataLog())
       },
     );
   }
+
+  static Color creamcolor = Color(0xfff5f5f5);
+  static Color darkblue = Color(0xff403b58);
 }

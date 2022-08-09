@@ -2,9 +2,9 @@ import 'package:bsk_flutter_1/model/catalog.dart';
 import 'package:flutter/material.dart';
 
 class ItemWidget extends StatelessWidget {
-  final Item item;
+final Item rubi;
 
-  const ItemWidget({super.key, required this.item}) : assert(item != null);
+  const ItemWidget({super.key, required this.rubi}) : assert(rubi != null);
 
   @override
   Widget build(BuildContext context) {
@@ -13,13 +13,13 @@ class ItemWidget extends StatelessWidget {
         padding: const EdgeInsets.all(5.0),
         child: ListTile(
           onTap: () {
-            print("${item.name} pressed");
+            print("${rubi.name} pressed");
           },
-          leading: Image.network(item.image),
-          title: Text(item.name),
-          subtitle: Text(item.desc),
+          leading: Image.network(rubi.image),
+          title: Text(rubi.name),
+          subtitle: Text(rubi.desc),
           trailing: Text(
-            "\$${item.price}",
+            "\$${rubi.price}",
             style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
             textScaleFactor: 1.5,
           ),
