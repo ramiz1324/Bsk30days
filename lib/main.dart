@@ -1,9 +1,12 @@
 import 'package:bsk_flutter_1/appbar.dart';
 import 'package:bsk_flutter_1/homepage.dart';
 import 'package:bsk_flutter_1/loginpage.dart';
+import 'package:bsk_flutter_1/pages/home_details.dart';
+import 'package:bsk_flutter_1/pages/home_weiget/catalog_header.dart';
 import 'package:bsk_flutter_1/register.dart';
 import 'package:bsk_flutter_1/singup.dart';
 import 'package:flutter/material.dart';
+import 'package:bsk_flutter_1/model/catalog.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -34,7 +37,7 @@ class Myapp extends StatelessWidget {
       //00home: LoginPage(),
       //themeMode: ThemeMode.light,
       // darkTheme: ThemeData(brightness: Brightness.dark),
-      //initialRoute: "/ui",
+      //initialRoute: "/ui", 
       initialRoute: "/homepage",
 
       routes: {
@@ -43,7 +46,7 @@ class Myapp extends StatelessWidget {
         "/singup": ((context) => Home()),
         "/homepage": ((context) => HomePage()),
         "/appber": (context) => Appber(),
-        //"/ui": ((context) => UicataLog())
+        //"/detail":(context) => HomeDetail(),      //"/ui": ((context) => UicataLog()) 
       },
     );
   }
