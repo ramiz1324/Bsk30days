@@ -1,6 +1,3 @@
-
-
-
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -12,9 +9,6 @@ class CatalogImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-        margin: EdgeInsets.all(2),
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        child: Image.network(image).p16());
+    return Image.network(image,).box.rounded.p8.white.make().p16().w40(context);
   }
 }

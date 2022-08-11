@@ -1,10 +1,13 @@
 //import 'dart:html';
 
 import 'package:bsk_flutter_1/model/catalog.dart';
+import 'package:bsk_flutter_1/pages/cartpage.dart';
+
 import 'package:bsk_flutter_1/pages/home_weiget/catalog_header.dart';
 import 'package:bsk_flutter_1/pages/home_weiget/catalog_list.dart';
 import 'package:bsk_flutter_1/widgets/drawer.dart';
 import 'package:bsk_flutter_1/widgets/item_wedget.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
@@ -52,6 +55,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     //print(CatalogModel.items.length);
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: (() => Navigator.push(context, MaterialPageRoute(builder: (context)=>MyCart()))),
+      backgroundColor: Color.fromARGB(255, 90, 88, 88),
+      child: Icon(CupertinoIcons.cart),
+      ),
       backgroundColor: Color.fromARGB(255, 243, 240, 240),
       //  drawer: Mydrawer(),
       //backgroundColor: Colors.black,

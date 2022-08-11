@@ -20,17 +20,19 @@ class HomeDetail extends StatelessWidget {
             "\$${catalog.price}".text.xl4.red400.bold.make(),
             ElevatedButton(
               onPressed: () {},
-              child: "Buy".text.make(),
+              child: "Add to Cart".text.make(),
               style: ButtonStyle(
                 backgroundColor:
                     MaterialStateProperty.all(Color.fromARGB(255, 90, 88, 88)),
                 shape: MaterialStateProperty.all(StadiumBorder()),
               ),
-            ).wh(100, 50)
+            ).wh(120, 50)
           ],
         ).p32(),
       ),
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       body: Column(
         children: [
           Hero(
@@ -50,6 +52,8 @@ class HomeDetail extends StatelessWidget {
                   catalog.name.text.xl4.bold.make(),
                   catalog.desc.text.xl.textStyle(context.captionStyle).make(),
                   HeightBox(10),
+                  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+                  .text.textStyle(context.captionStyle).make().p16(),
                 ],
               ).py32(),
             ),

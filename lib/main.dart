@@ -1,6 +1,7 @@
 import 'package:bsk_flutter_1/appbar.dart';
 import 'package:bsk_flutter_1/homepage.dart';
 import 'package:bsk_flutter_1/loginpage.dart';
+import 'package:bsk_flutter_1/pages/cartpage.dart';
 import 'package:bsk_flutter_1/pages/home_details.dart';
 import 'package:bsk_flutter_1/pages/home_weiget/catalog_header.dart';
 import 'package:bsk_flutter_1/register.dart';
@@ -19,7 +20,7 @@ class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //themeMode: ThemeMode.light,
+      themeMode: ThemeMode.dark,
       debugShowCheckedModeBanner: false,
       title: "BSK",
       theme: ThemeData(
@@ -46,6 +47,8 @@ class Myapp extends StatelessWidget {
         "/singup": ((context) => Home()),
         "/homepage": ((context) => HomePage()),
         "/appber": (context) => Appber(),
+        "/mycart": (context) => MyCart(),
+
         //"/detail":(context) => HomeDetail(),      //"/ui": ((context) => UicataLog()) 
       },
     );
