@@ -11,9 +11,9 @@ class HomeDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //backgroundColor: Colors.white,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -23,7 +23,7 @@ class HomeDetail extends StatelessWidget {
               child: "Add to Cart".text.make(),
               style: ButtonStyle(
                 backgroundColor:
-                    MaterialStateProperty.all(Color.fromARGB(255, 90, 88, 88)),
+                    MaterialStateProperty.all(context.theme.buttonColor),
                 shape: MaterialStateProperty.all(StadiumBorder()),
               ),
             ).wh(120, 50)
@@ -46,10 +46,10 @@ class HomeDetail extends StatelessWidget {
             edge: VxEdge.TOP,
             child: Container(
               width: context.screenWidth,
-              color: Colors.white,
+              color: context.cardColor,
               child: Column(
                 children: [
-                  catalog.name.text.xl4.bold.make(),
+                  catalog.name.text.color(context.accentColor).xl4.bold.make(),
                   catalog.desc.text.xl.textStyle(context.captionStyle).make(),
                   HeightBox(10),
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"

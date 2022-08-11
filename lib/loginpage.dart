@@ -1,6 +1,7 @@
 //import 'dart:html';
 import 'package:bsk_flutter_1/register.dart';
 import 'package:flutter/material.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.white,
+      color:context.theme.canvasColor,
       child: Form(
         key: formkey,
         child: Column(
@@ -98,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                           Material(
                             borderRadius:
                                 BorderRadius.circular(change ? 50 : 8),
-                            color: Colors.purple,
+                            color: context.theme.buttonColor,
                             child: InkWell(
                               splashColor: Colors.green,
                               onTap: () => movetohome(context),
