@@ -11,7 +11,7 @@ class MyCart extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.transparent,
-        title: "Cart".text.white.make(),
+        title: "Cart".text.make(),
         
       ),
     );
