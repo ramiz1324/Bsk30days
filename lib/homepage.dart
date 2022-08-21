@@ -1,31 +1,21 @@
 //import 'dart:html';
-
 import 'package:bsk_flutter_1/model/catalog.dart';
 import 'package:bsk_flutter_1/pages/cartpage.dart';
-
 import 'package:bsk_flutter_1/pages/home_weiget/catalog_header.dart';
 import 'package:bsk_flutter_1/pages/home_weiget/catalog_list.dart';
-import 'package:bsk_flutter_1/widgets/drawer.dart';
-import 'package:bsk_flutter_1/widgets/item_wedget.dart';
-import 'package:bsk_flutter_1/widgets/themes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:bsk_flutter_1/model/catalog.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-import 'main.dart';
 //import 'package:form_field_validator/form_field_validator.dart';
-
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
-
 class _HomePageState extends State<HomePage> {
   List<Item> item = [];
   @override
@@ -60,6 +50,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: (() => Navigator.push(
             context, MaterialPageRoute(builder: (context) => MyCart()))),
+        // ignore: deprecated_member_use
         backgroundColor: context.theme.buttonColor,
         child: Icon(CupertinoIcons.cart),
       ),

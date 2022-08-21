@@ -2,7 +2,6 @@ import 'package:bsk_flutter_1/pages/home_details.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-import '../../homepage.dart';
 import '../../model/catalog.dart';
 import 'catalog_image.dart';
 

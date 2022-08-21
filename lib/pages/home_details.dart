@@ -5,8 +5,7 @@ import 'package:velocity_x/velocity_x.dart';
 class HomeDetail extends StatelessWidget {
   final Item catalog;
 
-  const HomeDetail({super.key, required this.catalog})
-      : assert(catalog != null);
+  const HomeDetail({super.key, required this.catalog});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +22,7 @@ class HomeDetail extends StatelessWidget {
               child: "Add to Cart".text.make(),
               style: ButtonStyle(
                 backgroundColor:
+                    // ignore: deprecated_member_use
                     MaterialStateProperty.all(context.theme.buttonColor),
                 shape: MaterialStateProperty.all(StadiumBorder()),
               ),
@@ -48,12 +48,16 @@ class HomeDetail extends StatelessWidget {
               width: context.screenWidth,
               color: context.cardColor,
               child: Column(
+                //mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   catalog.name.text.color(context.accentColor).xl4.bold.make(),
                   catalog.desc.text.xl.textStyle(context.captionStyle).make(),
-                  HeightBox(10),
+                  HeightBox(15),
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
-                  .text.textStyle(context.captionStyle).make().p16(),
+                      .text
+                      .textStyle(context.captionStyle)
+                      .make()
+                      .p32(),
                 ],
               ).py32(),
             ),

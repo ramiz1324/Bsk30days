@@ -81,6 +81,7 @@ class _HomePage2State extends State<HomePage2> {
                         if (value!.isEmpty) {
                           return "Enter Email";
                         }
+                        return null;
                       },
                     ),
                   ),
@@ -105,6 +106,7 @@ class _HomePage2State extends State<HomePage2> {
                         } else if (value.length < 6) {
                           return "Password should be 6 lenght";
                         }
+                        return null;
                       },
                     ),
                   ),
@@ -126,6 +128,7 @@ class _HomePage2State extends State<HomePage2> {
                         if (value!.isEmpty) {
                           return "Enter UserName";
                         }
+                        return null;
                       },
                     ),
                   ),

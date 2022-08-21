@@ -7,18 +7,16 @@ class MyTheme {
       fontFamily: GoogleFonts.poppins().fontFamily,
       cardColor: Colors.white,
       canvasColor:  creamcolor,
-      buttonColor: darkblue,
-      accentColor: Colors.deepPurple,
 
       //primaryTextTheme: GoogleFonts.latoTextTheme(),
       appBarTheme: AppBarTheme(
         color: Colors.white,
         elevation: 0.0,
-        iconTheme: IconThemeData(color: Colors.black),
-        textTheme: Theme.of(context).textTheme,
+        iconTheme: IconThemeData(color: Colors.black), 
+        toolbarTextStyle: Theme.of(context).textTheme.bodyText2, 
+        titleTextStyle: Theme.of(context).textTheme.headline6,
         // toolbarTextStyle: TextStyle(color: Colors.black),
-      ),
-      primarySwatch: Colors.deepPurple);
+      ), colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepPurple).copyWith(secondary: Colors.deepPurple));
 
   static ThemeData DarkTheme(BuildContext context) => ThemeData(
     brightness: Brightness.dark,
@@ -29,11 +27,11 @@ class MyTheme {
       accentColor: Colors.white,
       //primaryTextTheme: GoogleFonts.latoTextTheme(),
       appBarTheme: AppBarTheme(
-        color: Colors.white,
+        color: Colors.white, 
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.white),
-        textTheme: Theme.of(context).textTheme,
-        //toolbarTextStyle: TextStyle(color: Colors.black),
+        //textTheme: Theme.of(context).textTheme.copyWith(headline6: context.textTheme.headline6.copyWith(color: Colors.white))
+        //toolbarTextStyle: 
       ),
       primarySwatch: Colors.deepPurple);
 

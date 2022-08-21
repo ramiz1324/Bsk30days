@@ -2,14 +2,10 @@ import 'package:bsk_flutter_1/appbar.dart';
 import 'package:bsk_flutter_1/homepage.dart';
 import 'package:bsk_flutter_1/loginpage.dart';
 import 'package:bsk_flutter_1/pages/cartpage.dart';
-import 'package:bsk_flutter_1/pages/home_details.dart';
-import 'package:bsk_flutter_1/pages/home_weiget/catalog_header.dart';
 import 'package:bsk_flutter_1/register.dart';
 import 'package:bsk_flutter_1/singup.dart';
 import 'package:bsk_flutter_1/widgets/themes.dart';
 import 'package:flutter/material.dart';
-import 'package:bsk_flutter_1/model/catalog.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(Myapp());
@@ -26,6 +22,7 @@ class Myapp extends StatelessWidget {
       title: "BSK",
       theme: MyTheme.LightTheme(context),
       darkTheme: MyTheme.DarkTheme(context),
+      
 
       //00home: LoginPage(),
       //themeMode: ThemeMode.light,

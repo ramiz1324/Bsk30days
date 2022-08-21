@@ -1,5 +1,4 @@
 //import 'dart:html';
-import 'package:bsk_flutter_1/register.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -18,7 +17,7 @@ class _LoginPageState extends State<LoginPage> {
         change = true;
       });
       await Future.delayed(Duration(seconds: 1));
-      await Navigator.pushNamed(context, '/register');
+      await Navigator.pushNamed(context, '/register'); 
       setState(() {
         change = false;
       });
@@ -67,6 +66,7 @@ class _LoginPageState extends State<LoginPage> {
                       if (value!.isEmpty) {
                         return "Username cannot be Empty ";
                       }
+                      return null;
                     },
                   ),
                   TextFormField(

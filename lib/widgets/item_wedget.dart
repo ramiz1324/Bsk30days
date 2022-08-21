@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ItemWidget extends StatelessWidget {
 final Item rubi;
 
-  const ItemWidget({super.key, required this.rubi}) : assert(rubi != null);
+  const ItemWidget({super.key, required this.rubi});
 
   @override
   Widget build(BuildContext context) {
